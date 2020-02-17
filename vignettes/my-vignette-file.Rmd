@@ -1,0 +1,51 @@
+---
+title: "my-vignette"
+output: 
+    bookdown::html_document2: 
+      base_format: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette-file}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: citation.bib
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tidyverse)
+knitr::read_chunk("external_code.R")
+source("external_code.R")
+```
+
+##Plotting and Cross Reference
+```{r, diamond-plot, fig.cap = "A ggplot of diamond price"}
+library(tidyverse)
+data(diamonds)
+ggplot(data=diamonds) + aes(x = carat , y = price) + geom_point()
+```
+We can see in Figure \@ref(fig:diamond-plot) a scatterplot. 
+
+
+
+###This is a function used from external code. 
+```{r, code_from_external}
+res = sqrt_function(9)
+res
+```
+
+##Citation 
+
+This paper develops a generalization of the widely used difference‐in‐differences method for evaluating the effects of policy changes.[@athey2006identification]
+
+Some people say that [@vadrevu2018intercomparison] while others 
+[@athey2006identification]
+
+
+
