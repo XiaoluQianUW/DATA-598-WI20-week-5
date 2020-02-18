@@ -24,8 +24,8 @@ library(mysimplecompedium)
 ```
 
 ## Licenses
-Text and figures: CC-BY-4.0
-Code: MIT + file
+Text and figures: [MIT License](LICENSE.md)
+Code: [MIT Lisence](LISENSE.md)
 Data: CC-0 attribution requested in reuse
 
 ## Code of Conduct
